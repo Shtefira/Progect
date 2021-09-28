@@ -1,24 +1,48 @@
 "use strict";
+//условия с switch
+const num = 50;
+switch (num) {
+        case 49:
+            console.log ('Неверно!');
+            break;
+        case 100:
+            console.log ('Неверно!');
+            break;
+        case 50:
+            console.log ('Good job');
+            break;
+        default:
+            console.log ('Not at this time!');
+            break;
+}
+//Тернарный оператор
+// const num = 50;
+// (num ===50) ? console.log ('ok!') : console.log ('error');
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?','');
 
-const personalMovieDB ={
-    count : numberOfFilms,
-    movies : {},
-    actors : {},
-    genres : [],
-    privat : false
-};
+// условия с if
+// if (4==9) {
+//     console.log ('ok!');
+// } else {
+//     console.log ('Error');
+// }
 
-const answer1 = prompt ('Один из последних просмотренных фильмов?',''),
-      answer2 = +prompt ('На сколько ві его оцените?', ''),
-      answer3 = prompt ('Один из последних просмотренных фильмов?',''),
-      answer4 = +prompt ('На сколько ві его оцените?', '');
 
-personalMovieDB.movies[answer1] = answer2;
-personalMovieDB.movies[answer3] = answer4;
-
-console.log (personalMovieDB);
+// const numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?','');
+// const personalMovieDB ={
+//     count : numberOfFilms,
+//     movies : {},
+//     actors : {},
+//     genres : [],
+//     privat : false
+// };
+// const answer1 = prompt ('Один из последних просмотренных фильмов?',''),
+//       answer2 = +prompt ('На сколько ві его оцените?', ''),
+//       answer3 = prompt ('Один из последних просмотренных фильмов?',''),
+//       answer4 = +prompt ('На сколько ві его оцените?', '');
+// personalMovieDB.movies[answer1] = answer2;
+// personalMovieDB.movies[answer3] = answer4;
+// console.log (personalMovieDB);
 
 
 //alert ('are you slept well?');
