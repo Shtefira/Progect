@@ -1,26 +1,28 @@
 "use strict";
 
-const options = {
-    name : 'Test',
-    width : 1024,
-    height : 1024,
-    colors : {
-        border : 'black' ,
-        bg : 'red'
-    },
-    makeTest : function (){
-        console.log ('Test');
-    }
+const arr = [101,12,203,16,10];
+arr.sort (comparNum);
+console.log (arr);
+function comparNum (a,b){
+    return a-b;
+}
 
-};
-options.makeTest();
+// arr.pop ();
+// arr.push (11);
 
+// for (let i=0; i<arr.length; i++){
+//     console.log (arr [i]);
+// }
 
-// console.log (options);
+// for (let namber of arr){
+//     console.log (namber);
+// }
 
-// console.log (options ['colors']["border"]);
+// arr.forEach (function (item, i, arr){
+//     console.log (`${i} : ${item} incide of array ${arr}`);
+// });
 
-// const {border,bg} = options.colors;
-// console.log (border);
-
-// console.log (Object.keys (options).length);
+// const str = prompt ("Какой товар вас интересует?","");
+// const products = str.split (', ');
+// console.log (products);
+// console.log (products.join (';'));
