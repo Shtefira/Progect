@@ -1,14 +1,26 @@
 "use strict";
 
-function learnJS (lang, callback){
-    console.log (`Я учу ${lang}`);
-    callback();
-}
-function done() {
-    
-        console.log(`Я прошел этот урок`);
-   
+const options = {
+    name : 'Test',
+    width : 1024,
+    height : 1024,
+    colors : {
+        border : 'black' ,
+        bg : 'red'
+    },
+    makeTest : function (){
+        console.log ('Test');
+    }
 
-}
-learnJS (`Java Script`,done );
+};
+options.makeTest();
 
+
+// console.log (options);
+
+// console.log (options ['colors']["border"]);
+
+// const {border,bg} = options.colors;
+// console.log (border);
+
+// console.log (Object.keys (options).length);
