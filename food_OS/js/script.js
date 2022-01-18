@@ -264,7 +264,6 @@ window.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                     console.log(data);
                     showThanksModal(message.success);
-                    form.reset();
                     statusMessage.remove();
             }). catch(() => {
                 showThanksModal(message.failure);
