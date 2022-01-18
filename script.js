@@ -1,53 +1,57 @@
 'use strict';
 
-// console.log('Запрос данных...');
+//filter - для фильтрации данных из одного массива в другой
 
-// const req = new Promise(function(resolve, reject){
-//     setTimeout(() => {
-//         console.log('Подготовка данных');
-    
-//         const product = {
-//             name: 'TV',
-//             price: 2000
-//         };
-    
-//         resolve(product);
-    
-//     }, 2000);
+// const names = ['Ivan', 'Iren', 'Ekaterina', 'Evgenia'];
 
-// });
+// const shortNames = names.filter(function(name) {
+//     return name.length < 5;
+//  });
+// console.log (shortNames);
 
-// req.then((product) => {
-//     return new Promise((resolve, reject) =>{
-//         setTimeout(() => {
-//             product.status = 'ordered';
-//             resolve(product);
-//         }, 2000);
-//     });
-// }).then(data => {
-//     data.modify = true;
-//     return data;
-// }).then(data => {
-//     console.log(data);
-// }).catch(() => {
-//     console.error('Произошла ошибка :(');
-// }).finally(() => {
-//     console.log();
-// });
 
-const test = time => {
-    return new Promise(resolve => {
-        setTimeout(() => resolve(), time);
-    });
-};
+//map - для трансформации данных из массива в др. массив
 
-// test(1000).then(() => console.log('1000 ms'));
-// test(2000).then(() => console.log('2000 ms'));
+// const answers = ['IvAn', 'IreN', 'EkatErina'];
 
-// Promise.all([test(1000),test(2000)]).then(() =>{
-//     console.log('All');
-// });
+// const res = answers.map( item => item.toLowerCase());
 
-Promise.race([test(1000),test(2000)]).then(() =>{
-    console.log('Race');
-});
+// console.log(res);
+
+
+// every -перебирает массив и возвращает нам правда/ложь если ВСЕ из эл. подошли под критерий перебора
+// some - перебирает массив и возвращает нам правда/ложь если хоть ОДИН из эл. подошел под критерий перебора
+
+// const arr = [4, 'Ivan', 'ndfvsf'];
+
+// console.log(arr.some(item => typeof(item) === 'number'));
+
+// console.log(arr.every(item => typeof(item) === 'string'));
+
+
+//reduce - собирает массив в одно единое целое, как бы склеевает и помещает в единое значение
+
+// const arr = [4, 5, 1, 2, 3, 6];
+
+// const res = arr.reduce((sum, number) => sum  + number);
+// console.log(res);
+// console.log(typeof(res));
+
+// const arr = ['Ivan', 'Iren', 'Ekaterina'];
+
+// const res = arr.reduce((sum, number) => `${sum}, ${number}`, 'Shtefanesa');
+// console.log(res);
+
+
+// const obj = {
+//     ivan: 'person',
+//     anna: 'person',
+//     dog: 'animal',
+//     cat: 'animal'
+// };
+
+// const newArr = Object.entries(obj)
+// .filter(item => item[1] === 'person')
+// .map(item => item[0]);
+
+// console.log(newArr);
