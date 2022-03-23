@@ -1,47 +1,37 @@
 'use strict';
 
-class User {
-    constructor(name, age) {
-        this.name = name;
-        this._age = age;
+const number = 1;
 
-    }
+(function(){
+    let number = 2;
+    console.log(number);
+    console.log(number + 3);
+}());
 
-    #surname = 'Shtefanesa';
+console.log(number);
 
-    get surname () {
-        return this.#surname;
-    }
+const user = (function(){
+    const privat = function(){
+        console.log('I am privat!');
+    };
 
-    set surname (surname) {
-        if (typeof surname === 'string' && surname.length > 10) {
-            this.#surname = surname;
-        } else {
-            alert = 'Недопустимое значение!';
-        }
-    }
+    return{
+        sayHello: privat
+    };
+})();
+
+user.sayHello();
+
+// class UserNew {
+//     (function(){
+//       )  const privat = function(){
+//             console.log('I am privat!');
+//         };
     
-    say = () => {
-        console.log(`Имя пользователя: ${this.name} ${this.#surname}, возраст пользователя :${this._age}`);
+//         return{
+//             sayHello: privat
+//         };
+//     })()
+// } 
 
-    }
-
-    get age () {
-        return this._age;
-    }
-
-    set age (age) {
-        if (typeof age === 'number' && age > 0 && age < 110){
-            this._age = age;
-        } else {
-            console.log('Недопустимое значение!');
-        }
-    }
-}
-
-const ivan = new User ('Ivan', 27);
-console.log(ivan.surname);
-console.log(ivan.surname = 'Pivovar');
-console.log(ivan.surname);
-
-ivan.say();
+// UserNew.sayHello();
